@@ -6,3 +6,6 @@ class User(models.Model):
     email = models.EmailField(null=False, unique=True, blank=False)
     phone_num = models.CharField(max_length=25)
     date_of_birth = models.DateField(null=True, blank=True)
+
+    def __str__(self):
+        return self.email
